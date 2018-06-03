@@ -1,5 +1,7 @@
 package io.github.tplxmx96.collection;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -35,6 +37,10 @@ public class MapTest {
         for (Object value : data.values()){
             System.out.println("value=" + value);
         }
+    }
+
+    public void printJsonString(){
+        System.out.println(JSON.toJSONString(data));
     }
 
 }
