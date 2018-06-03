@@ -7,6 +7,7 @@ public class Student {
     private String address;
     private Health health;
     private School school;
+    private Book book;
 
 
     public String getFirstName() {
@@ -55,5 +56,11 @@ public class Student {
 
     public void setSchool(School school) {
         this.school = school;
+    }
+    public Book getBook(){
+        return book;
+    }
+    public void setBook(Book book){
+        this.book = book;
     }
 }

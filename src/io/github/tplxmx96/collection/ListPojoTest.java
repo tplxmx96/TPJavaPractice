@@ -1,10 +1,7 @@
 package io.github.tplxmx96.collection;
 
 import com.alibaba.fastjson.JSON;
-import io.github.tplxmx96.bean.Health;
-import io.github.tplxmx96.bean.Student;
-import io.github.tplxmx96.bean.Result;
-import io.github.tplxmx96.bean.School;
+import io.github.tplxmx96.bean.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +48,16 @@ public class ListPojoTest {
             school.setMiddle("中学");
             school.setSenior("高中");
             school.setCollege("大学");
+
+            Book book = new Book();
+            book.setChinese("语文书");
+            book.setMath("数学书");
+            book.setHistory("历史书");
+            book.setGeography("地理书");
+            book.setPolitical("政治书");
+            book.setSkill("技能书");
+            student.setBook(book);
+
 
             student.setSchool(school);
             studentList.add(student);
