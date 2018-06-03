@@ -13,8 +13,8 @@ public class Main {
 
         //测试键值对（key-value）的map
         MapTest mapTest = new MapTest();
-        mapTest.testAdd().iteratorPrint();
+        mapTest.testAdd().printKey();
         mapTest.printKey();
-
+        mapTest.printValue();
     }
 }
