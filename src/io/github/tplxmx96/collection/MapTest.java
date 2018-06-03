@@ -26,12 +26,15 @@ public class MapTest {
         }
 
     }
-
     public void printKey(){
        for (String key : data.keySet()){
            System.out.println("key=" + key + " and velue" + data.get(key));
        }
     }
-
+    public void printValue(){
+        for (Object value : data.values()){
+            System.out.println("value=" + value);
+        }
+    }
 
 }
