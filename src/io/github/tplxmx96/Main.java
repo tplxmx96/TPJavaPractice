@@ -26,7 +26,7 @@ public class Main {
         //listTest.printJsonString();
         ListPojoTest pojoTest = new ListPojoTest();
        // pojoTest.addData();
-        pojoTest.addByFor();
+        pojoTest.addByForV2();
         pojoTest.printJsonString();
     }
 }

@@ -3,15 +3,15 @@ package io.github.tplxmx96.bean;
 import java.util.List;
 
 public class Result {
-    private List<Person> persons;
+    private List<Student> students;
     private int code;
 
-    public List<Person> getPersons() {
-        return persons;
+    public List<Student> getStudents() {
+        return students;
     }
 
-    public void setPersons(List<Person> persons) {
-        this.persons = persons;
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 
     public int getCode() {

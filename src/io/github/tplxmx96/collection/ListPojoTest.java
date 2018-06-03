@@ -2,58 +2,59 @@ package io.github.tplxmx96.collection;
 
 import com.alibaba.fastjson.JSON;
 import io.github.tplxmx96.bean.Health;
-import io.github.tplxmx96.bean.Person;
+import io.github.tplxmx96.bean.Student;
 import io.github.tplxmx96.bean.Result;
+import io.github.tplxmx96.bean.School;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListPojoTest {
 
-    private List<Person> personList = new ArrayList<>();
+    private List<Student> studentList = new ArrayList<>();
 
-    public void addData(Health health) {
+    public void addByForV1() { //V ---> Version --->版本
+        for (int i = 0; i < 5; i++) {
+            Student student = new Student();
+            student.setFirstName("tan");
+            student.setLastName("pan");
+            student.setEmail("tplxmx96@mail.com");
+            student.setAddress("上海");
 
-        Person p1 = new Person();
-        p1.setFirstName("tan");
-        p1.setFirstName("pan");
-        p1.setEmail("tplxmx96@gmail.com");
-        p1.setAddress("上海");
+            Health health = new Health();
+            health.setHeight(185 + i);
+            health.setWeight(160 + i);
+            health.setEyesight(0.6f);
+            student.setHealth(health);
 
-        Person p2 = new Person();
-        p2.setFirstName("tan2");
-        p2.setFirstName("pan2");
-        p2.setEmail("tplxmx96@gmail.com");
-        p2.setAddress("上海");
-
-        Person p3 = new Person();
-        p3.setFirstName("tan3");
-        p3.setFirstName("pan3");
-        p3.setEmail("tplxmx96@gmail.com");
-        p3.setAddress("上海");
-
-        personList.add(p1);
-        personList.add(p2);
-        personList.add(p3);
+            studentList.add(student);
+        }
     }
 
-    public void addByFor() {
+    public void addByForV2() {
         for (int i = 0; i < 3; i++) {
-            Person person = new Person();
-            person.setFirstName("tan" + i);
-            person.setLastName("pan" + i);
-            person.setEmail("tplxmx96@gmail.com");
-            person.setAddress("上海");
+            Student student = new Student();
+            student.setFirstName("tan" + i);
+            student.setLastName("pan" + i);
+            student.setEmail("tplxmx96@gmail.com");
+            student.setAddress("上海");
 
-            Health health =  new Health();
+            Health health = new Health();
             health.setHeight(177 + i);
             health.setWeight(160 + i);
             health.setEyesight(0.7f);
-            person.setHealth(health);
+            student.setHealth(health);
 
-            personList.add(person);
+            School school = new School();
+            school.setNursery("幼儿园");
+            school.setPrimary("小学");
+            school.setMiddle("中学");
+            school.setSenior("高中");
+            school.setCollege("大学");
+
+            student.setSchool(school);
+            studentList.add(student);
         }
-
     }
 
 
@@ -73,12 +74,13 @@ public class ListPojoTest {
      * }]
      */
     public void printJsonString() {
-        System.out.println(JSON.toJSONString(personList));
+        System.out.println(JSON.toJSONString(studentList));
     }
 
     public void printJsonString2() {
         Result result = new Result();
-        result.setPersons(personList);
+        result.setStudents(studentList);
         System.out.println(JSON.toJSONString(result));
     }
+
 }

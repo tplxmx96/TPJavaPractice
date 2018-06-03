@@ -1,11 +1,13 @@
 package io.github.tplxmx96.bean;
 
-public class Person {
+public class Student {
     private String firstName;
     private String lastName;
     private String email;
     private String address;
     private Health health;
+    private School school;
+
 
     public String getFirstName() {
         return firstName;
@@ -45,5 +47,13 @@ public class Person {
 
     public void setHealth(Health health) {
         this.health = health;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }
