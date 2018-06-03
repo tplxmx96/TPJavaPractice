@@ -27,5 +27,11 @@ public class MapTest {
 
     }
 
+    public void printKey(){
+       for (String key : data.keySet()){
+           System.out.println("key=" + key + " and velue" + data.get(key));
+       }
+    }
+
 
 }
