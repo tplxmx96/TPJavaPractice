@@ -1,5 +1,7 @@
 package io.github.tplxmx96.bean;
 
+import java.util.List;
+
 public class Student {
     private String firstName;
     private String lastName;
@@ -7,7 +9,7 @@ public class Student {
     private String address;
     private Health health;
     private School school;
-    private Book book;
+    private List<Book> books;
 
 
     public String getFirstName() {
@@ -57,10 +59,12 @@ public class Student {
     public void setSchool(School school) {
         this.school = school;
     }
-    public Book getBook(){
-        return book;
+
+    public List<Book> getBooks() {
+        return books;
     }
-    public void setBook(Book book){
-        this.book = book;
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }

@@ -2,31 +2,33 @@ package io.github.tplxmx96.collection;
 
 import com.alibaba.fastjson.JSON;
 import io.github.tplxmx96.bean.*;
+import io.github.tplxmx96.bean.Book;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ListPojoTest {
 
     private List<Student> studentList = new ArrayList<>();
 
-    public void addByForV1() { //V ---> Version --->版本
-        for (int i = 0; i < 5; i++) {
-            Student student = new Student();
-            student.setFirstName("tan");
-            student.setLastName("pan");
-            student.setEmail("tplxmx96@mail.com");
-            student.setAddress("上海");
-
-            Health health = new Health();
-            health.setHeight(185 + i);
-            health.setWeight(160 + i);
-            health.setEyesight(0.6f);
-            student.setHealth(health);
-
-            studentList.add(student);
-        }
-    }
+//    public void addByForV1() { //V ---> Version --->版本
+//        for (int i = 0; i < 5; i++) {
+//            Student student = new Student();
+//            student.setFirstName("tan");
+//            student.setLastName("pan");
+//            student.setEmail("tplxmx96@mail.com");
+//            student.setAddress("上海");
+//
+//            Health health = new Health();
+//            health.setHeight(185 + i);
+//            health.setWeight(160 + i);
+//            health.setEyesight(0.6f);
+//            student.setHealth(health);
+//
+//            studentList.add(student);
+//        }
+//    }
 
     public void addByForV2() {
         for (int i = 0; i < 3; i++) {
@@ -48,18 +50,19 @@ public class ListPojoTest {
             school.setMiddle("中学");
             school.setSenior("高中");
             school.setCollege("大学");
-
-            Book book = new Book();
-            book.setChinese("语文书");
-            book.setMath("数学书");
-            book.setHistory("历史书");
-            book.setGeography("地理书");
-            book.setPolitical("政治书");
-            book.setSkill("技能书");
-            student.setBook(book);
-
-
             student.setSchool(school);
+
+            List<Book> books = new ArrayList<>();
+            for (int j = 0;j <2 ;j++) {
+                Book book = new Book();
+                book.setBookName("新华字典");
+                book.setBookType("Chinese");
+                book.setStartAt("2018-06-03");
+                book.setEndAt("2018-06-08");
+                books.add(book);
+                student.setBooks(books);
+
+            }
             studentList.add(student);
         }
     }

@@ -1,57 +1,49 @@
 package io.github.tplxmx96.bean;
 
+import java.util.Date;
+
 public class Book {
-    private String chinese;
-    private String math;
-    private String history;
-    private String geography;
-    private String political;
-    private String skill;
+//    private String chinese;
+//    private String math;
+//    private String history;
+//    private String geography;
+//    private String political;
+//    private String skill;
 
-    public String getChinese() {
-        return chinese;
+    private String bookType;
+    private String bookName;
+    private String startAt;    //借书时间
+    private String endAt;      //借书类别
+
+    public String getBookType() {
+        return bookType;
     }
 
-    public void setChinese(String chinese) {
-        this.chinese = chinese;
+    public void setBookType(String bookType) {
+        this.bookType = bookType;
     }
 
-    public String getMath() {
-        return math;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setMath(String math) {
-        this.math = math;
-    }
-    public String getHistory() {
-        return history;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public void setHistory(String history) {
-        this.history = history;
+    public String getStartAt() {
+        return startAt;
     }
 
-    public String getGeography() {
-        return geography;
+    public void setStartAt(String startAt) {
+        this.startAt = startAt;
     }
 
-    public void setGeography(String geography) {
-        this.geography = geography;
+    public String getEndAt() {
+        return endAt;
     }
 
-    public String getPolitical() {
-        return political;
-    }
-
-    public void setPolitical(String political) {
-        this.political = political;
-    }
-
-    public String getSkill() {
-        return skill;
-    }
-
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public void setEndAt(String endAt) {
+        this.endAt = endAt;
     }
 }
