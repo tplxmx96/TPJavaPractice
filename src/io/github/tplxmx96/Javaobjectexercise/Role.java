@@ -15,6 +15,20 @@ public class Role {
     /** 职业 */
     public String job;
 
+    public Role(){
+    }
+    /**
+     * 构造方法/构造器
+     * 1、没有返回类型
+     * 2、方法名和类名一致
+     */
+    public Role(String name1,int level1,String job1){
+        name = name1;
+        level = level1;
+        job1 = job1;
+
+    }
+
     public void show(){
         System.out.println(name + "\t" + level + "\t" + job);
     }
