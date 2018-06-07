@@ -8,7 +8,7 @@ public class Book {
     private String isbn;
     private double peice;
     private int count;  //当前图书对象的库存量
-    private boolean boeeow; //是否可借
+    private boolean boeeow;   //是否可借
 
     public Book(){}
 

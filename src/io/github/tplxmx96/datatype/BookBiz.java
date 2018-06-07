@@ -6,6 +6,9 @@ import io.github.tplxmx96.Javaobjectexercise.Book;
  * 图书的业务类，封装了到图书数组的增删改查方法
  */
 public class BookBiz {
+    public void test(int num){
+        num++;
+    }
     /**
      * 销售书籍
      * @param book 要销售的图书对象

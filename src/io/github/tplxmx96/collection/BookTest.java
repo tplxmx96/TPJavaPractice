@@ -8,7 +8,9 @@ public class BookTest {
         Book book = new Book("老九君醉酒谈Java","123-321",98.8,5);
         //实例化图书业务对象
         BookBiz bookBiz = new BookBiz();
+        int num = 1234;
         bookBiz.sellBook(book);
-        System.out.println(book.getCount());
+        bookBiz.test(num);
+        System.out.println(num);
     }
 }
