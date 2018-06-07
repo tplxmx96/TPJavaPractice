@@ -1,4 +1,4 @@
-package io.github.tplxmx96.datatype;
+package io.github.tplxmx96.slow;
 
 public class Swap {
     public static void main(String[] args){
@@ -29,3 +29,5 @@ public class Swap {
 //
 //    }
 }
+
+
