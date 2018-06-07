@@ -1,12 +1,6 @@
 package io.github.tplxmx96;
 
-import io.github.tplxmx96.Javaobjectexercise.Role;
 import io.github.tplxmx96.collection.ListPojoTest;
-import io.github.tplxmx96.collection.ListTest;
-import io.github.tplxmx96.collection.MapTest;
-import io.github.tplxmx96.datatype.TypeTest;
-
-import java.util.List;
 
 public class Main {
     public static void main(String[] args){

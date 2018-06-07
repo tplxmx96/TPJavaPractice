@@ -1,4 +1,4 @@
-package io.github.tplxmx96.datatype;
+package io.github.tplxmx96.collection;
 
 /**
  * TP Java基础数据类型学习测试
