@@ -22,6 +22,7 @@ public class Swap {
         demo.attr1 = demo.attr2;
         demo.attr2 = temp;
     }
+
 //    public static void Swap1(int nums[]){
 //        int temp = nums[0];
 //        nums[0] = nums[1];
