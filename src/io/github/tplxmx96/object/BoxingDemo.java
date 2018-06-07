@@ -4,9 +4,6 @@ import io.github.tplxmx96.bean.Book;
 
 public class BoxingDemo {
     public static void main(String[] args){
-
-
-
         Integer num1 = new Integer(200);
         Integer num2 = new Integer(200);
         //两个对象之间的比较方法
