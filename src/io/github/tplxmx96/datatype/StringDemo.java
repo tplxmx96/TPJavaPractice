@@ -10,46 +10,50 @@ import java.util.Scanner;
 public class StringDemo {
 
 
-        /**
-         * 判断传入的字符串是否是不是一个正确格式的小数
-         * 字符串中只能有一个小数点，小数点不能在第一位，也不能在最后一位
-         * @param str
-         * @return
-         */
-    public static boolean isDecimal(String str) {
-        boolean isDecimal = true;
-        for (int i = 0; i < str.length(); i++) {
-            if (!Character.isDigit(str.charAt(i))) {
-                if (str.charAt(i) == '.') {
-                    if (i == 0 || i == str.length() - 1) {//如果小数点在第一位或最后一位，仍然是非法的，返回false
-                        isDecimal = false;
-                        break;
-                    }
-                } else {//如果当前字符不是数字并且也不是小数点，那么证明是否非法字符，直接返回false
-                    isDecimal = false;
-                    break;
-                }
-            }
-            //判断字符串中只能有一个小数点
-            //1、存在小数点。2、从前搜索的下标和从后往前搜索的下标刚好相等
-            if (!(str.contains(".") && str.indexOf(".") == str.lastIndexOf("."))) {
-                return false;
-            }
-
-            //1、判断字符串中的每个元素必须是数字或小数点
-            //2、如果有小数点，那么小数点不能在第一位和最后一位，并且只能有一个小数点
-//        if (str.indexOf('.') == 0 || str.indexOf('.') == str.length() - 1){
+//        /**
+//         * 判断传入的字符串是否是不是一个正确格式的小数
+//         * 字符串中只能有一个小数点，小数点不能在第一位，也不能在最后一位
+//         * @param str
+//         * @return
+//         */
+//    public static boolean isDecimal(String str) {
+//        boolean isDecimal = true;
+//        for (int i = 0; i < str.length(); i++) {
+//            if (!Character.isDigit(str.charAt(i))) {
+//                if (str.charAt(i) == '.') {
+//                    if (i == 0 || i == str.length() - 1) {//如果小数点在第一位或最后一位，仍然是非法的，返回false
+//                        isDecimal = false;
+//                        break;
+//                    }
+//                } else {//如果当前字符不是数字并且也不是小数点，那么证明是否非法字符，直接返回false
+//                    isDecimal = false;
+//                    break;
+//                }
+//            }
+//            //判断字符串中只能有一个小数点
+//            //1、存在小数点。2、从前搜索的下标和从后往前搜索的下标刚好相等
+//            if (!(str.contains(".") && str.indexOf(".") == str.lastIndexOf("."))) {
+//                return false;
+//            }
+//
+//            //1、判断字符串中的每个元素必须是数字或小数点
+//            //2、如果有小数点，那么小数点不能在第一位和最后一位，并且只能有一个小数点
+////        if (str.indexOf('.') == 0 || str.indexOf('.') == str.length() - 1){
+////
+////        }
+//            return isDecimal;
 //
 //        }
-            return isDecimal;
-
-        }
         public static void main(String[] args)throws UnsupportedEncodingException{
             Scanner input = new Scanner(System.in);
             //indexOf方法
             String password = "ab3456abc";
-            System.out.println(password.indexOf("a"));
+//            System.out.println(password.indexOf("a"));
             //问题：判断字符串中只能有一个小数点，小数点不能在第一位，也不能在最后一位
+
+            //substring [beginIndex,endIndex）  [1 , 3)
+            System.out.println(password.substring(1,3));
+            System.out.println(password.substring(3));
 
 
 //        //trim方法：去掉字符串
@@ -92,5 +96,5 @@ public class StringDemo {
 //        System.out.println(value);
 //
         }
-    }
+//    }
 }
