@@ -8,7 +8,7 @@ public class Hero extends Object{
 
 
     public Hero() {
-        System.out.println("父类默认构造！");
+//        System.out.println("父类默认构造！");
     }
 
     public Hero(String nickName, int level, int maxLife, int currLife){
@@ -18,6 +18,10 @@ public class Hero extends Object{
         this.maxLife = maxLife;
         this.currLife = currLife;
     }
+    public int compareToByName(Hero hero){
+        return getNickName().compareTo(hero.getNickName());
+    }
+
 
     /**
      * 比较当前英雄对象和传入的英雄对象的大小相等
