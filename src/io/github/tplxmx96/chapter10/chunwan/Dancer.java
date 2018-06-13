@@ -8,6 +8,7 @@ public class Dancer extends Actor {
         super();
     }
 
+
     public Dancer(String name) {
         super(name);
     }

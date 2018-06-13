@@ -5,7 +5,6 @@ package io.github.tplxmx96.chapter10.chunwan;
  */
 public abstract class Actor {//当一个类是抽象类的时候，就不能使用new来实例化了！--抽象类是一个天生的父类
     private String name;
-
     public Actor(){}
 
     public Actor(String name){
