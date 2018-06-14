@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class CalendarDemo {
     public static void main(String[] args) throws ParseException {
@@ -25,23 +26,29 @@ public class CalendarDemo {
         );
         System.out.println(strTime);
 
-        //为日历对象设定时间
-        cal.set(2018,6,14,14,28,4);
-        Date date = cal.getTime();
-        System.out.println(date.toLocaleString());
+//        //为日历对象设定时间
+//        cal.set(2018,6,14,14,28,4);
+//        Date date = cal.getTime();
+//        System.out.println(date.toLocaleString());
+//
+//        //日期格式化类
+//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+//        String strDate = format.format(date);
+//        System.out.println(strDate);
+//        //将字符串转换为Date类型
+//        Date newDate = format.parse("2017-12-30 23:59:59:999");
+//        System.out.println(newDate.toGMTString());
 
-        //日期格式化类
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-        String strDate = format.format(date);
-        System.out.println(strDate);
-        //将字符串转换为Date类型
-        Date newDate = format.parse("2017-12-30 23:59:59:999");
-        System.out.println(newDate.toGMTString());
+        GregorianCalendar cal2 = new GregorianCalendar(2018,(6 - 1),14);
+        long diff = cal.getTimeInMillis() - cal2.getTimeInMillis();
+        int diffDays = (int) (diff / 1000 / 60 / 60 / 24);
+        System.out.println("相差" + diffDays + "天");
 
+        cal.add(Calendar.YEAR,3);
+        System.out.println(cal.get(Calendar.YEAR));
 
-    }
-    @Deprecated
-    public static void test(){
+        System.out.println(cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+
 
     }
 }
