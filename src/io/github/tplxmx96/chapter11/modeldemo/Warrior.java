@@ -1,8 +1,6 @@
-package io.github.tplxmx96.chapter11.pkgame;
+package io.github.tplxmx96.chapter11.modeldemo;
 
-import io.github.tplxmx96.chapter11.modeldemo.Hero;
-
-public class Warrior extends io.github.tplxmx96.chapter11.modeldemo.Hero {
+public abstract class Warrior extends Hero {
     public Warrior(){
         super();
         setName("默认英雄");
@@ -14,7 +12,7 @@ public class Warrior extends io.github.tplxmx96.chapter11.modeldemo.Hero {
         setY(y);
     }
     @Override
-    public boolean canFightByDistance(io.github.tplxmx96.chapter11.modeldemo.Hero hero) {
+    public boolean canFightByDistance(Hero hero) {
         double distance = getDistance(getX(),getY(),hero.getX(),hero.getY());
         //假设战士的估计距离固定为100
         return distance <= 100;

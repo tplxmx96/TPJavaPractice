@@ -1,5 +1,7 @@
 package io.github.tplxmx96.chapter11.modeldemo;
 
+import io.github.tplxmx96.chapter11.pkgame.Assailable;
+
 /**
  * 英雄类 - 父类
  */
@@ -137,4 +139,6 @@ public abstract class Hero {
     public void setY(int y) {
         this.y = y;
     }
+
+    public abstract boolean canFightByDistance(Assailable hero);
 }
