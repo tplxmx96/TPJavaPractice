@@ -1,6 +1,5 @@
 package io.github.tplxmx96.chapter12;
 
-import java.util.InputMismatchException;
 
 public class DivisionDemo {
     /**
