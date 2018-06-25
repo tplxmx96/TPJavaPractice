@@ -12,3 +12,4 @@ public class ChatDemo {
         new Thread(new Rece(receSocket)).start();
     }
 }
+

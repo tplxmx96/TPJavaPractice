@@ -10,6 +10,7 @@ public class Rece implements Runnable{
         this.ds = ds;
     }
 
+
     public void run(){
         try{
             while (true){
