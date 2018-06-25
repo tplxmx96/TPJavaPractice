@@ -1,4 +1,4 @@
-package io.github.tplxmx96.network;
+package io.github.tplxmx96.network.UDP;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

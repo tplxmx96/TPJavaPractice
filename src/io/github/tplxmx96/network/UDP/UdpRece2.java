@@ -1,4 +1,4 @@
-package io.github.tplxmx96.network;
+package io.github.tplxmx96.network.UDP;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
