@@ -25,6 +25,7 @@ public class BufferedStreamTset {
      * 使用缓存流拷贝文件
      * @return 拷贝过程的用时(毫秒)
      */
+
     private static long CopyFileByBufferedStream(){
         File file = new File(FilePath1);//要复制的文件
         if (!file.exists()){
