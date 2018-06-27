@@ -1,4 +1,4 @@
-package io.github.tplxmx96.chapter13;
+package io.github.tplxmx96.chapter13.Buffered;
 
 import java.io.*;
 
