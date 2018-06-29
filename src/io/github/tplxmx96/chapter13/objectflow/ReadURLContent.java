@@ -1,4 +1,6 @@
-package io.github.tplxmx96.chapter13.Reader;
+package io.github.tplxmx96.chapter13.objectflow;
+
+import io.github.tplxmx96.chapter13.Reader.ReplaceLyriceDemo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
