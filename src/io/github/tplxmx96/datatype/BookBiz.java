@@ -6,6 +6,9 @@ import io.github.tplxmx96.Javaobjectexercise.Book;
  * 图书的业务类，封装了到图书数组的增删改查方法
  */
 public class BookBiz {
+    public Object addBook;
+    private int count;
+
     public void test(int num){
         num++;
     }
@@ -23,5 +26,15 @@ public class BookBiz {
         }
         book.setCount(book.getCount() - 1);
         return 1;
+    }
+
+    public void addBook(io.github.tplxmx96.chapter14.boodemov1.Book newBook) {
+    }
+
+    public void delBook(io.github.tplxmx96.chapter14.boodemov1.Book newBook) {
+    }
+
+    public int getBookCount() {
+        return count;
     }
 }

@@ -18,6 +18,7 @@ public class Book {
      * @param obj
      * @return
      */
+
     @Override
     public boolean equals(Object obj) {
 //        如果传入的参数为空或不是Book类的实例，直接不需要判断，返回false
