@@ -1,4 +1,4 @@
-package io.github.tplxmx96.chapter14.boodemov1;
+package io.github.tplxmx96.chapter14.boodemo_v1;
 
 
 public class Main {
@@ -15,4 +15,5 @@ public class Main {
 //            System.out.println(Datas.BookStore[i].getBookId() + "\t" + Datas.BookStore[i].getBookNeam() + "\t" + Datas.BookStore[i].getCount());
 //        }
 //    }
+
 }

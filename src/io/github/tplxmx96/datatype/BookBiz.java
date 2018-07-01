@@ -28,10 +28,10 @@ public class BookBiz {
         return 1;
     }
 
-    public void addBook(io.github.tplxmx96.chapter14.boodemov1.Book newBook) {
+    public void addBook(io.github.tplxmx96.chapter14.boodemo_v1.Book newBook) {
     }
 
-    public void delBook(io.github.tplxmx96.chapter14.boodemov1.Book newBook) {
+    public void delBook(io.github.tplxmx96.chapter14.boodemo_v1.Book newBook) {
     }
 
     public int getBookCount() {

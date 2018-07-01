@@ -1,4 +1,4 @@
-package io.github.tplxmx96.chapter14.boodemov1;
+package io.github.tplxmx96.chapter14.boodemo_v1;
 
 import java.util.Scanner;
 

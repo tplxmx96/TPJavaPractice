@@ -1,4 +1,4 @@
-package io.github.tplxmx96.chapter14.boodemov1;
+package io.github.tplxmx96.chapter14.boodemo_v1;
 
 public class Book {
     private String bookId; //图书的内部编号
