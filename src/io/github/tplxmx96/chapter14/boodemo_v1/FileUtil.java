@@ -48,4 +48,40 @@ public class FileUtil {
           }
     }
 
+    /**
+     * 从文件中读取内容，将内容逐行拆解，重新总合成对象、对象数组并返回
+     * @return
+     */
+    public static Book[] LoadBooks(){
+        File bookFile = new File(BookFile);
+        if (!bookFile.exists()){
+            return null;
+        }
+        Book[] bookArray = new Book[999];  //注意：读取的时候，最多只能读取999个图书对象
+        try(FileReader fReader = new FileReader(bookFile);
+            BufferedReader reader = new BufferedReader(fReader)
+        ){
+            String line = null;
+            int count = 0;
+            while ((line = reader.readLine()) != null){ //读取文件的套路
+                Book currBook = new Book();
+                //line ： 1000，老九君外传
+                String[] attrs = line.split(SepAttr); //将读取出的一行以属性分隔符进行分隔,返回分隔后的字符串数组
+                currBook.setBookId(attrs[0].trim());
+                currBook.setBookNeam(attrs[1].trim());
+                currBook.setCount(Integer.parseInt(attrs[2].trim()));
+                //将构建成功的图书对象添加到图书数组中，以便返回
+                bookArray[count] = currBook;
+                count++;
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bookArray;
+    }
+
+
 }
